@@ -32,6 +32,11 @@ public class DBService {
         Livro l5 = new Livro(null, "I, robot", "Isaac Asimov", "Lorem ipsum", Tamanho.GRANDE, cat2);
 
         cat1.getLivros().addAll(Arrays.asList(l1, l2));
+        cat2.getLivros().addAll(Arrays.asList(l3, l4, l5));
+
+        this.categoriaRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
+        this.livrosRepository.saveAll(Arrays.asList(l1, l2, l3, l4, l5));
+
     }
 
 }
